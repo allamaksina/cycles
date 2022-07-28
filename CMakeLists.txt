@@ -3,4 +3,4 @@ project(cycles C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(cycles main.c switch_test.c)
+add_executable(cycles main.c switch_test.c cycles_test.c)
