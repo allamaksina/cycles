@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void cycles_test(){
-        int a = 10;
+    int a = 10;
     int b = 20;
     int even = 0;
 
@@ -41,7 +41,7 @@ void cycles_test(){
     int base = 2;
     int result = 1;
 
-    int i;
+//    int i;
     for (i = 0; i < pow1; i++){
         result *= base;
     }
@@ -50,6 +50,6 @@ void cycles_test(){
     double pow2 = 10;
 
     printf("%d", result);
-    printf("%f", pow(base1, pow2));
+//    printf("%f", pow(base1, pow2));
 
 }
