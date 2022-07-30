@@ -5,6 +5,10 @@ void switch_test();
 void cycles_test();
 void make_triangle();
 void arrays();
+void arrays2();
+int calculateSquareEquality(int a, int b, int c, float* x1, float* x2);
+int find_odd(int * array, int length);
+void print_short_type(int * array, int length);
 
 void swap(int * a, int * b){
     *a ^= *b;
@@ -42,7 +46,38 @@ int main(int argc, const char* argv[]) {
     scanf("%d", &a);
     isPrime(a);
 
-    arrays();
+//    arrays2();
+
+    int b;
+    int c;
+    float x1 = 0;
+    float x2 = 0;
+
+    printf("\n Enter a");
+    scanf("%d", &a);
+    printf("\n Enter b");
+    scanf("%d", &b);
+    printf("\n Enter c");
+    scanf("%d", &c);
+
+    int z = calculateSquareEquality(a, b, c, &x1, &x2);
+
+    printf("this equation has %d roots: %f, %f", z + 1, x1, x2);
+
+    int i;
+
+    int array2[5] = {2, 3, 4, 6, 9};
+    int res = find_odd(array2, 5);
+    if (res == 1){
+
+        printf("\n%d\n", res);
+        for (i = 0; i < 5; i++){
+            printf("%d ", array2[i]);
+        }
+    }
+
+    int array3[3] = {375927645, 509560957, 957693475};
+    print_short_type(array3, 3);
 
     return 0;
 }
