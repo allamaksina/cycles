@@ -87,11 +87,11 @@ int calculateSquareEquality(int a, int b, int c, float* x1, float* x2){
 }
 
 int find_odd(int * array, int length){
-    int i = 0;
+    int i;
     int result = 0;
     for (i = 0; i < length; i++){
         if (*(array + i) % 2) {
-            *(array + i) = *(array + i) * 2;
+            *(array + i) *= 2;
             result = 1;
         }
 
@@ -99,12 +99,34 @@ int find_odd(int * array, int length){
     return result;
 }
 
-void print_short_type(int * array, int length){
+void print_short_type(unsigned int * array, int length){
 
     int i = 0;
-    short s;
-    for (i = 0; i < length; i++){
-        printf("%d ", (short)*(array + i));
+    unsigned short * s = array;
+    for (i = 0; i < length * 2; i++){
+        printf("%d ", *(s + i));
+    }
+
+}
+
+void mult_table(int rows, int cols){
+
+    int table[rows][cols];
+
+    int i, j;
+
+    for (i = 0; i < rows; i++){
+        for (j = 0; j < cols; j++){
+            table[i][j] = (i + 1) * (j + 1);
+        }
+    }
+
+
+    for (i = 0; i < rows; i++){
+        for (j = 0; j < cols; j++){
+            printf("%3d", table[i][j]);
+        }
+        printf("\n");
     }
 
 }

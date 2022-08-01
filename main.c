@@ -8,7 +8,8 @@ void arrays();
 void arrays2();
 int calculateSquareEquality(int a, int b, int c, float* x1, float* x2);
 int find_odd(int * array, int length);
-void print_short_type(int * array, int length);
+void print_short_type(unsigned int * array, int length);
+void mult_table(int rows, int cols);
 
 void swap(int * a, int * b){
     *a ^= *b;
@@ -76,8 +77,11 @@ int main(int argc, const char* argv[]) {
         }
     }
 
-    int array3[3] = {375927645, 509560957, 957693475};
+    unsigned int array3[3] = {375927645, 65535, 65536};
     print_short_type(array3, 3);
+
+    printf("\n");
+    mult_table(10, 10);
 
     return 0;
 }
