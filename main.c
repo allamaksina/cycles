@@ -10,6 +10,8 @@ int calculateSquareEquality(int a, int b, int c, float* x1, float* x2);
 int find_odd(int * array, int length);
 void print_short_type(unsigned int * array, int length);
 void mult_table(int rows, int cols);
+void strs();
+void main_struct();
 
 void swap(int * a, int * b){
     *a ^= *b;
@@ -29,7 +31,7 @@ void isPrime (int a){
     printf("The number %d is %sprime", a, (c == 0) ? "not ": "");
 }
 
-int main(int argc, const char* argv[]) {
+int main_arrays(int argc, const char* argv[]) {
 
     int a_swap = 20;
     int b_swap = 60;
@@ -82,6 +84,15 @@ int main(int argc, const char* argv[]) {
 
     printf("\n");
     mult_table(10, 10);
+
+    return 0;
+}
+
+int main(int argc, const char* argv[]){
+
+    main_struct();
+//        strs();
+
 
     return 0;
 }
