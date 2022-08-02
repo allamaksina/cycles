@@ -12,6 +12,7 @@ void print_short_type(unsigned int * array, int length);
 void mult_table(int rows, int cols);
 void strs();
 void main_struct();
+int files_main();
 
 void swap(int * a, int * b){
     *a ^= *b;
@@ -90,7 +91,8 @@ int main_arrays(int argc, const char* argv[]) {
 
 int main(int argc, const char* argv[]){
 
-    main_struct();
+    files_main();
+//    main_struct();
 //        strs();
 
 
