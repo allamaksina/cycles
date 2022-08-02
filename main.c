@@ -13,6 +13,11 @@ void mult_table(int rows, int cols);
 void strs();
 void main_struct();
 int files_main();
+int main_memory();
+void toBinary(int d, char* res);
+void main_rect();
+void printThisArray();
+void printLine();
 
 void swap(int * a, int * b){
     *a ^= *b;
@@ -91,7 +96,14 @@ int main_arrays(int argc, const char* argv[]) {
 
 int main(int argc, const char* argv[]){
 
-    files_main();
+    printLine();
+//    printThisArray();
+//    main_rect();
+//    char res[255] = "";
+//    toBinary(123, res);
+//    puts(res);
+//    main_memory();
+//    files_main();
 //    main_struct();
 //        strs();
 
